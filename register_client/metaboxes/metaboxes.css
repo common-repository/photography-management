@@ -1,0 +1,118 @@
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+.cc-form-field {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 1em 0;
+}
+.cc-form-field.column {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cc-form-field label {
+  flex-basis: 20%;
+  font-weight: bold;
+}
+.cc-form-field input:not([type="checkbox"]) {
+  flex-basis: 30%;
+}
+.cc-form-field textarea {
+  flex-basis: 50%;
+}
+.Gallery .Gallery--wrap {
+  flex-basis: 80%;
+  box-sizing: border-box;
+  padding: 1em;
+  background: #f5f5f5;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+  border: 1px solid #e5e5e5;
+}
+.Gallery .Gallery--images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.Gallery .Gallery--img {
+  position: relative;
+  align-self: center;
+  box-sizing: border-box;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 19.2%;
+  margin-left: 0%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+.Gallery .Gallery--img:before,
+.Gallery .Gallery--img:after {
+  content: '';
+  display: table;
+}
+.Gallery .Gallery--img:after {
+  clear: both;
+}
+.Gallery .Gallery--img:nth-child(5n) {
+  margin-right: 0%;
+  float: right;
+}
+.Gallery .Gallery--img:nth-child(5n+1) {
+  clear: both;
+}
+.Gallery .Gallery--img .Gallery--img--remove {
+  display: none;
+  z-index: 999;
+}
+.Gallery .Gallery--img img {
+  width: 100%;
+  transition: opacity 0.2s linear;
+  vertical-align: bottom;
+  backface-visibility: hidden;
+}
+.Gallery .Gallery--img:hover .Gallery--img--remove {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #222;
+  font-weight: bold;
+  padding: 0.6em;
+  font-size: 1.2em;
+  line-height: 0;
+}
+.Gallery .Gallery--img:hover img {
+  opacity: 0.5;
+}
+.Gallery .upload-button,
+.Gallery .remove-button {
+  margin: 0.5em;
+}
+.Project {
+  position: relative;
+  margin-left: 4em;
+}
+.Project:not(:first-of-type) {
+  margin-top: 6em;
+}
+.Project:before {
+  content: attr(index);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  left: -4em;
+  height: 100%;
+  border-right: 1px solid rgba(0,0,0,0.09);
+  padding-right: 1em;
+  line-height: 0;
+  font-weight: bold;
+  color: rgba(0,0,0,0.57);
+}
